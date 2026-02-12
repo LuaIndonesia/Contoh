@@ -18,7 +18,33 @@ function Contoh.halo()
 end
 
 function Contoh.pesan()
-   io.stdout.write("Santai bro santai😎!\n")
+   local pesan = {
+      "Santai bro santai😎!\n",
+      "Dingin tetapi tidak kejam🥶\n",
+      "Menyala abangku!!!😎🔥...\n",
+      "Sedia aku sebelum hujan🌧️☂️\n",
+      "Hanya cinta dan malam, yang tidak akan pernah habis🌆❤️\n"
+   }
+   local panjangPesan = #pesan
+   local indeksAcak = math.random(1, panjangPesan)
+   io.stdout.write(pesan[indeksAcak])
+end
+
+function Contoh.asciify(teks)
+   return "\e[34m***[\e[0m\e[33m<( "..teks.." )>\e[0m\e34m]***\e[0m"
+end
+
+function Contoh.ascii_hewan(hewan)
+   if hewan == "kelinci" then
+      return [[
+          ()_()    •-------------------•
+          (• •)  \e[33mAku cinta kamu!\e[0m
+          (>❤️<)   •-------------------•
+          ()..()
+      ]]
+   else
+      return "Format ascii art hewan tidak didukung!"
+   end
 end
 
 function Contoh.unduh()
