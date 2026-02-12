@@ -35,7 +35,7 @@ function Contoh.asciify(teks)
 end
 
 function Contoh.ascii_hewan(hewan)
-   if hewan == "kelinci" then
+   if hewan == "kelinci":lower() then
       return [[
           ()_()    •-------------------•
           (• •)  \e[33mAku cinta kamu!\e[0m
