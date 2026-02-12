@@ -1,5 +1,5 @@
 # Contoh v1.0-1
-[Contoh Library Lua](https://www.anin.ct.ws)
+[Contoh Library Lua](https://anin.ct.ws)
 
 Ini adalah contoh library Lua untuk programming, testing, debugging, dll. Dan di tujukan untuk menjadi contoh modul/library Lua saja :)
 
