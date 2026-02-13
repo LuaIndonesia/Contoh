@@ -54,7 +54,7 @@ function Contoh.unduh()
            error("✖️ Fungsi sudah di definisikan!")
        else
            _G[k] = v
-           print("\e[34m[✓] Fungsi berhasil diunduh ke objek global.\e[0m")
+           print("\x1b[34m[✓] Fungsi berhasil diunduh ke objek global.\x1b[0m")
        end
     end
   end
