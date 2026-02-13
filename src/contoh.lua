@@ -17,7 +17,7 @@ function Contoh.halo()
    print("Halo Dunia :D!")
 end
 
-function Contoh.pesan()
+function Contoh.pesan_acak()
    local pesan = {
       "Santai bro santai😎!\n",
       "Dingin tetapi tidak kejam🥶\n",
@@ -25,9 +25,35 @@ function Contoh.pesan()
       "Sedia aku sebelum hujan🌧️☂️\n",
       "Hanya cinta dan malam, yang tidak akan pernah habis🌆❤️\n"
    }
-   local panjangPesan = #pesan
-   local indeksAcak = math.random(1, panjangPesan)
-   io.stdout:write(pesan[indeksAcak])
+  local function shuffle(t)
+       local n = #t
+       for i = n, 2, -1 do
+          local j = math.random(i)
+          t[i], t[j] = t[j], t[i]
+       end
+  end
+   shuffle(pesan)
+   print(pesan[1])
+end
+
+function Contoh.memuat(presentase)
+   local bar = ""
+   for i = 1, 20 do
+      if i <= (presentase / 5) then
+          bar = bar .. "#"
+      else
+          bar = bar .. "-"
+      end
+      io.write("\rMemuat... [".. bar .. "] ".. presentase .. "%")
+      io.flush()
+   end
+
+   for i = 0, 100, 5 do
+      memuat(i)
+      -- Implementasi loading progress...
+      os.execute("sleep 0.5")
+   end
+   print("\nSelesai!")
 end
 
 function Contoh.asciify(teks)
@@ -54,10 +80,30 @@ function Contoh.unduh()
            error("✖️ Fungsi sudah di definisikan!")
        else
            _G[k] = v
-           print("\x1b[34m[✓] Fungsi berhasil diunduh ke objek global.\x1b[0m")
+        -- print("\x1b[34m[✓] Fungsi berhasil diunduh ke objek global.\x1b[0m")
        end
     end
   end
+end
+
+function Contoh.tambah(x, y)
+   return x + y
+end
+
+function Contoh.kurang(a, b)
+   return a - b
+end
+
+function Contoh.kali(w, x)
+   return w * x
+end
+
+function Contoh.bagi(y, z)
+   if z == 0 then
+      error("Tidak dapat dibagi dengan 0!")
+   else
+      return y / z
+   end
 end
 
 return Contoh
