@@ -9,8 +9,7 @@
 package = "contoh"
 version = "1.0-1"
 source = {
-  url = "git://github.com/LuaIndonesia/Contoh.git",
-  tag = "v1.0"
+  url = "git://github.com/LuaIndonesia/Contoh.git"
 }
 description = {
   summary = "Contoh library/modul Lua.",
