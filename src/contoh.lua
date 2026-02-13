@@ -9,7 +9,7 @@ function Contoh:baru(nama, umur, alamat)
    return objek
 end
 
-function Contoh.sapa()
+function Contoh:sapa()
    print("Halo!, nama saya ".. self.nama .. ", umur saya " .. self.umur .. " tahun, dan alamat saya di " .. self.alamat .." :).")
 end
 
@@ -31,14 +31,14 @@ function Contoh.pesan()
 end
 
 function Contoh.asciify(teks)
-   return "\e[34m***[\e[0m\e[33m<( "..teks.." )>\e[0m\e34m]***\e[0m"
+   return "\x1b[34m***[\x1b[0m\x1b[33m<( "..teks.." )>\x1b[0m\x1b[34m]***\x1b[0m"
 end
 
 function Contoh.ascii_hewan(hewan)
-   if hewan == "kelinci":lower() then
+   if hewan == string.lower("kelinci") then
       return [[
           ()_()    •-------------------•
-          (• •)  \e[33mAku cinta kamu!\e[0m
+          (• •)  \x1b[33mAku cinta kamu!\x1b[0m
           (>❤️<)   •-------------------•
           ()..()
       ]]
@@ -53,6 +53,7 @@ function Contoh.unduh()
        if _G[k] then
            error("✖️ Fungsi sudah di definisikan!")
        else
+           _G[k] = v
            print("\e[34m[✓] Fungsi berhasil diunduh ke objek global.\e[0m")
        end
     end
