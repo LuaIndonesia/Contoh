@@ -27,7 +27,7 @@ function Contoh.pesan()
    }
    local panjangPesan = #pesan
    local indeksAcak = math.random(1, panjangPesan)
-   io.stdout.write(pesan[indeksAcak])
+   io.stdout:write(pesan[indeksAcak])
 end
 
 function Contoh.asciify(teks)
@@ -49,7 +49,7 @@ end
 
 function Contoh.unduh()
   for k, v in pairs(Contoh) do
-    if type(v) == "function" then
+    if type(v) == "function" and v ~= "baru" and v ~= "unduh" then
        if _G[k] then
            error("✖️ Fungsi sudah di definisikan!")
        else
