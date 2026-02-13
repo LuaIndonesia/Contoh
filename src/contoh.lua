@@ -76,12 +76,7 @@ end
 function Contoh.unduh()
   for k, v in pairs(Contoh) do
     if type(v) == "function" and v ~= "baru" and v ~= "unduh" then
-       if _G[k] then
-           error("✖️ Fungsi sudah di definisikan!")
-       else
-           _G[k] = v
-        -- print("\x1b[34m[✓] Fungsi berhasil diunduh ke objek global.\x1b[0m")
-       end
+       _G[k] = v
     end
   end
 end
