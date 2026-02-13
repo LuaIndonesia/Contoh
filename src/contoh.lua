@@ -64,7 +64,7 @@ function Contoh.ascii_hewan(hewan)
    if hewan == string.lower("kelinci") then
       return [[
           ()_()    •-------------------•
-          (• •)  \x1b[33mAku cinta kamu!\x1b[0m
+          (• •)  \27[33mAku cinta kamu!\27[0m
           (>❤️<)   •-------------------•
           ()..()
       ]]
