@@ -34,6 +34,6 @@ build = {
 test = {
   type = "busted",
   test = {
-    "test/contoh_test.lua"
+    "spec/contoh_spec.lua"
   }
 }
