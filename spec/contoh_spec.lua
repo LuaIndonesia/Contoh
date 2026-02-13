@@ -17,7 +17,7 @@ describe("Mengetes beberapa fungsi pada library: ", function()
       print("Hasil tambah: " .. tostring(tambah(7, 3)))
       print("Hasil kurang: " .. tostring(kurang(10, 5)))
       print("Hasil kali: " .. tostring(kali(5, 10)))
-      print("Hasil bagi: " .. tostringbagi(30, 2)))
+      print("Hasil bagi: " .. tostring(bagi(30, 2)))
    end)
     
    it("Menjalankan fungsi lainnya", function()
