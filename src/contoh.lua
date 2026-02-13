@@ -36,26 +36,6 @@ function Contoh.pesan_acak()
    print(pesan[1])
 end
 
-function Contoh.memuat(presentase)
-   local bar = ""
-   for i = 1, 20 do
-      if i <= (presentase / 5) then
-          bar = bar .. "#"
-      else
-          bar = bar .. "-"
-      end
-      io.write("\rMemuat... [".. bar .. "] ".. presentase .. "%")
-      io.flush()
-   end
-
-   for i = 0, 100, 5 do
-      memuat(i)
-      -- Implementasi loading progress...
-      os.execute("sleep 0.5")
-   end
-   print("\nSelesai!")
-end
-
 function Contoh.asciify(teks)
    return "\x1b[34m***[\x1b[0m\x1b[33m<( "..teks.." )>\x1b[0m\x1b[34m]***\x1b[0m"
 end
