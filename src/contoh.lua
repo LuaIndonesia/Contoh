@@ -10,7 +10,7 @@ function Contoh:baru(nama, umur, alamat)
 end
 
 function Contoh:sapa()
-   print("Halo!, nama saya ".. self.nama .. ", umur saya " .. self.umur .. " tahun, dan alamat saya di " .. self.alamat .." :).")
+   print("\x1b[1mHalo!, nama saya ".. self.nama .. ", umur saya " .. self.umur .. " tahun, dan alamat saya di " .. self.alamat .." :).\x1b[0m")
 end
 
 function Contoh.halo()
