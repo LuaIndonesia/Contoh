@@ -8,6 +8,7 @@
 
 package = "contoh"
 version = "1.0-1"
+rockspec_format = "3.0"
 source = {
   url = "git://github.com/LuaIndonesia/Contoh.git"
 }
