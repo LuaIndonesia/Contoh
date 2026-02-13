@@ -1,6 +1,8 @@
 -- test/contoh_test.lua
--- Ini adalah contoh testing library sederhana.
--- Ketik: luarocks test, untuk menjalankan tes.
+--[[
+ Ini adalah contoh testing library sederhana.
+ Ketik: luarocks test, untuk menjalankan tes.
+]]
 
 describe("Mengetes beberapa fungsi pada library", function()
    it("Menjalankan fungsi sapa", function()
@@ -22,6 +24,6 @@ describe("Mengetes beberapa fungsi pada library", function()
       local contoh = require "../src/contoh"
       contoh.unduh()
       halo()
-      pesan()
+      pesan_acak()
    end)
 end)
