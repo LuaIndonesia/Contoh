@@ -20,11 +20,19 @@ description = {
   license = "MIT"
 }
 dependencies = {
-  "lua >= 5.1"
+  "lua >= 5.1",
+  "busted >= 1.0"
 }
 build = {
   type = "builtin",
   modules = {
     ["contoh"] = "src/contoh.lua"
+  }
+}
+
+test = {
+  type = "busted",
+  test = {
+    "test/contoh_test.lua"
   }
 }
