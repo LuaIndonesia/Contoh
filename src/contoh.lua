@@ -14,7 +14,7 @@ function Contoh:sapa()
 end
 
 function Contoh.halo()
-   print("Halo Dunia :D!")
+   print("\x1b[33mHalo Dunia :D!\x1b[0m")
 end
 
 function Contoh.pesan_acak()
@@ -61,7 +61,8 @@ function Contoh.asciify(teks)
 end
 
 function Contoh.ascii_hewan(hewan)
-   if hewan == string.lower("kelinci") then
+   hewan = hewan:lower()
+   if hewan == "kelinci" then
       return [[
           ()_()    •-------------------•
           (• •)  \27[33mAku cinta kamu!\27[0m
